@@ -1,0 +1,72 @@
+mode: train_gat
+
+data:
+  path: 'data/'
+  fb: 
+    path: 'data/fb15k-237/'
+    raw: 'data/fb15k-237/raw/'
+  wn: 
+    path: 'data/wn18rr/'
+    raw: 'data/wn18rr/raw/'
+  gt: 
+    path: 'data/geotrend/'
+    raw: 'data/geotrend/raw/'
+  em: 
+    path: 'data/emvista/'
+    raw: 'data/emvista/raw/'
+  type: 'wn'
+
+embeddings:
+  path: 'embeddings/'
+  graph:
+    model: 'random' #random, TransE, ComplEx, ConvE, DistMult, RGCN, ConvKB
+    mode: 'train'
+    epochs: 500
+    dim: 128
+  word:
+    get: True
+    use: True
+    model: 'bert-base-uncased' #'bert-base-uncased', 'roberta-large'
+    mode: 'train'
+    epochs: 20
+    batch_size: 20
+    lr: 1e-2
+    max_grad_norm: 0.5
+    dim: 128
+    max_length: 82
+
+results:
+  path: 'results/'
+
+checkpoints:
+  path: 'checkpoints'
+  out: 'checkpoints/out'
+  conv: 'checkpoints/conv'
+
+gat:
+  epochs: 3600
+  weight_decay: 5e-6
+  lr: 1e-3
+  batch_size: 24920
+  valid_invalid_ratio_gat: 2
+  dropout: 0.3
+  alpha: 0.2
+  dim: [100, 200]
+  heads: [2, 2]
+  margin: 5
+
+conv:
+  epochs: 200
+  weight_decay: 1e-5
+  lr: 1e-3
+  batch_size: 64
+  alpha: 0.2
+  valid_invalid_ratio_gat: 40
+  channels: 500
+  dropout: 0.0
+
+nhop:
+  n: 2
+  use: True
+  get: True
+  partial: True

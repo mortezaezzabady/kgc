@@ -1,0 +1,68 @@
+{
+    "also_see":{
+        "templates":[
+            "[t] is closely related to [h], often seen together or in similar contexts."
+        ],
+        "rel":"seen together"
+    },
+    "derivationally_related_form":{
+        "templates":[
+            "[t] is derived from the same root as [h], sharing a common linguistic origin."
+        ],
+        "rel":"derived from"
+    },
+    "has_part":{
+        "templates":[
+            "[h] contains [t] as a part of its structure or composition."
+        ],
+        "rel":"part"
+    },
+    "hypernym":{
+        "templates":[
+            "[t] is a broader category encompassing [h], which is a specific instance or type of [t]."
+        ],
+        "rel":"broader category encompassing"
+    },
+    "instance_hypernym":{
+        "templates":[
+            "[t] is a general class or category to which [h], being a particular instance, belongs."
+        ],
+        "rel":"particular instance"
+    },
+    "member_meronym":{
+        "templates":[
+            "[h] is a member of [t], making it part of a larger whole or group."
+        ],
+        "rel":"member"
+    },
+    "member_of_domain_region":{
+        "templates":[
+            "[t] is associated with a specific region or area, and [h] is an example or aspect found within that region."
+        ],
+        "rel":"associated with a specific region"
+    },
+    "member_of_domain_usage":{
+        "templates":[
+            "[t] pertains to a particular field or domain of usage, with [h] being a specific term or concept used within that domain."
+        ],
+        "rel":"pertains to a particular field or domain of usage"
+    },
+    "similar_to":{
+        "templates":[
+            "[t] is similar to [h] in many aspects, though they may have their distinct differences."
+        ],
+        "rel":"similar to"
+    },
+    "synset_domain_topic_of":{
+        "templates":[
+            "[t] is the subject or topic area to which [h], being a related concept or entity, belongs."
+        ],
+        "rel":"topic area to"
+    },
+    "verb_group":{
+        "templates":[
+            "[t] is linked to [h] by sharing a semantic relationship in verb form, often indicating similar actions or states."
+        ],
+        "rel":"semantic relationship in verb form"
+    }  
+}
